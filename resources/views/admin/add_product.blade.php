@@ -46,8 +46,8 @@
 
                                 <div class="form-group">
                                     <select name="product_status" class="form-control input-sm m-bot15">
-                                        <option value="0" >Ẩn</option>
-                                        <option value="0">Hiện</option>
+                                        <option value="0">Ẩn</option>
+                                        <option value="1">Hiển thị</option>
                                     </select>
                                 </div>
 

@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Requests;
+use Session;
+use Illuminate\Support\Facades\Redirect;
+session_start();
 
 class HomeController extends Controller
 {
@@ -13,7 +18,7 @@ class HomeController extends Controller
         ->join('tbl_category_product','tbl_category_product.category_id','=','tbl_product.category_id')
         ->orderby('tbl_product.product_id','desc')->get();
 
-        return view('pages.home')->with('category', $cate_product)->with('brand', $brand_product)->with('all_product', $all_product);
 
+        return view('pages.home')->with('category',$cate_product)->with('all_product',$all_product);
     }
 }

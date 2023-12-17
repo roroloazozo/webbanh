@@ -20,7 +20,6 @@ use App\Http\Controllers\ProductController;
 
 // ---- fronted ----
 Route::get('/', [HomeController::class, 'index']);
-
 Route::get('/trang-chu',[HomeController::class, 'index']);
 
 // ---- backend ----
