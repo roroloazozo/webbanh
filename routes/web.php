@@ -22,6 +22,11 @@ use App\Http\Controllers\ProductController;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/trang-chu',[HomeController::class, 'index']);
 
+// ---- show category ----
+Route::get('/danh-muc-san-pham/{category_id}',[CategoryProductController::class, 'show_category_home']);
+Route::get('/chi-tiet-san-pham/{product_id}',[ProductController::class, 'details_product']);
+
+
 // ---- backend ----
 Route::get('/admin',[AdminController::class, 'index']);
 Route::get('/dashboard',[AdminController::class, 'show_dashboard']);
